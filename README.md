@@ -29,17 +29,17 @@ http://localhost:9091/book-api/v1/bookid/range?from=5&to=13
 
 #### Todo:
 ###### GET
-firstbook DONE
-lastbook DONE
-latestupdated DONE
-latestcreated DONE
-byid/:id DONE
-book/:?query in-progress
-bookcount DONE
-book/:?from=5&to=10 (5 to 10) DONE
-byauthor/:?name DONE
+- firstbook DONE
+- lastbook DONE
+- latestupdated DONE
+- latestcreated DONE
+- byid/:id DONE
+- book/:?query in-progress
+- bookcount DONE
+- book/:?from=5&to=10 (5 to 10) DONE
+- byauthor/:?name DONE
 ###### POST
-createbook CHECK
-updatebook CHECK
+- createbook CHECK
+- updatebook CHECK
 ###### DELETE
-deletebook CHECK
+- deletebook CHECK
