@@ -1,0 +1,39 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: books
+      POSTGRES_USER: root
+    ports:
+      - "5432:5432"
+    networks:
+      - fullstack
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - '8080:8080'
+    depends_on:
+      - db
+    networks:
+      - fullstack
+
+  api:
+    image: book-api
+    restart: always
+    ports:
+      - 9091:9091
+    depends_on:
+      - db
+    networks:
+      - fullstack
+
+networks:
+  fullstack:
+    driver: bridge
